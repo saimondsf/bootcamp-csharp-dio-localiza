@@ -1,0 +1,16 @@
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.exe
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.deps.json
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.runtimeconfig.json
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.runtimeconfig.dev.json
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.dll
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\ref\BootcampLocaliza.dll
+c:\workspace\BootcampLocaliza\bin\Debug\net5.0\BootcampLocaliza.pdb
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.csprojAssemblyReference.cache
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.GeneratedMSBuildEditorConfig.editorconfig
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.AssemblyInfoInputs.cache
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.AssemblyInfo.cs
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.csproj.CoreCompileInputs.cache
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.dll
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\ref\BootcampLocaliza.dll
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.pdb
+c:\workspace\BootcampLocaliza\obj\Debug\net5.0\BootcampLocaliza.genruntimeconfig.cache
