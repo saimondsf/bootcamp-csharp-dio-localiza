@@ -1,4 +1,5 @@
 ﻿using System;
+using Classes.Herança;
 
 namespace BootcampLocaliza
 {
@@ -6,17 +7,11 @@ namespace BootcampLocaliza
     {
         static void Main(string[] args)
         {
-            int numeroDeVezes = 9;
+            Ponto p1 = new Ponto(1, 2);
+            Ponto3D p2 = new Ponto3D(3, 4, 5);
 
-            int[] a = new int [3];
-            a[0] = 1;
-            a[1] = 2;
-            a[2] = 3;
-            int[] t = a;
-
-            for(int i=0; i < numeroDeVezes; i++){
-                Console.WriteLine($"Bem-vindo ao curso de .NET {i}");
-            }
+            p1.CalcularDistancia3();
+            p2.CalcularDistancia3();
         }
     }
 }
