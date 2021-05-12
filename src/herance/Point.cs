@@ -2,7 +2,7 @@ using System;
 
 namespace Classes.Herança
 {
-    public class Ponto{
+    public class Ponto : IMostrar{
 
         public int x, y;
 
@@ -24,6 +24,10 @@ namespace Classes.Herança
         public virtual void CalcularDistancia3(){
             //Virtual - Poderá ser modificada suas funcionalidades nas classes que iráo herda-la 
             Console.WriteLine("Função 'CalcularDistancia3'");
+            Console.WriteLine($"{x} {y}");
+        }
+
+        public void Mostrar(){
             Console.WriteLine($"{x} {y}");
         }
     }    

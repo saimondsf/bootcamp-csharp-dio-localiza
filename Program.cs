@@ -5,12 +5,24 @@ namespace BootcampLocaliza
 {
     class Program
     {
+        enum Estacao
+        {
+            Outono,
+            Inverno,
+            Verao,
+            Primavera
+        }
+
         static void Main(string[] args)
         {
-            PontoTal[] algumvetor = new PontoTal[100];
-            for(int i = 0; i < 100; i++){
-                algumvetor[i] = new PontoTal(i, i);
-                algumvetor[i].Mostrar();
+            Estacao a = Estacao.Outono;
+            Console.WriteLine(a);
+            
+            Ponto[] algumponto = new Ponto[10];
+
+            for(int i = 0; i < 10; i++){
+                 algumponto[i] = new Ponto(i, i);
+                 algumponto[i].Mostrar();
             }
         }
     }
