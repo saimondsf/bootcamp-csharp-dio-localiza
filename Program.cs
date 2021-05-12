@@ -7,11 +7,11 @@ namespace BootcampLocaliza
     {
         static void Main(string[] args)
         {
-            Ponto p1 = new Ponto(1, 2);
-            Ponto3D p2 = new Ponto3D(3, 4, 5);
-
-            p1.CalcularDistancia3();
-            p2.CalcularDistancia3();
+            PontoTal[] algumvetor = new PontoTal[100];
+            for(int i = 0; i < 100; i++){
+                algumvetor[i] = new PontoTal(i, i);
+                algumvetor[i].Mostrar();
+            }
         }
     }
 }
