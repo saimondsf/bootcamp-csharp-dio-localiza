@@ -6,105 +6,42 @@ namespace BootcampLocaliza
     {
         static void Main(string[] args)
         {
-            Aluno[] alunos = new Aluno[5];
-            var indiceAluno = 0;
+            double valor;
+            int inteiro, auxNotas, auxMoedas;
 
-            string opcaoUsuario = ObterOpcaoUsuario();
+            Console.WriteLine("Digite um número:");
+            valor = Convert.ToDouble(Console.ReadLine());
 
-            while(opcaoUsuario.ToUpper() != "X")
-            {
-                switch(opcaoUsuario)
-                {
-                    case "1": //Insere um novo aluno
-                        Console.WriteLine("Informe o nome do aluno:");
-                        Aluno aluno = new Aluno();
-                        aluno.Nome = Console.ReadLine();
+            inteiro = (int)valor;       //Console.WriteLine($"{inteiro}");
+            valor *= 100;               //Console.WriteLine($"{valor}");        
+            auxMoedas = (int)valor;     //Console.WriteLine($"{auxMoedas}");
 
-                        Console.WriteLine("Informe a nota do aluno:");
-                        if (decimal.TryParse(Console.ReadLine(), out decimal nota))
-                        {
-                            aluno.Nota = nota;
-                        }
-                        else
-                        {
-                            throw new ArgumentOutOfRangeException("O valor da nota deve ser decimal");
-                        }
-                        
-                        alunos[indiceAluno] = aluno;
-                        indiceAluno++;
+            Console.WriteLine("NOTAS:");
+            Console.WriteLine("{0} nota(s) de R$ 100.00", inteiro/100);
+            auxNotas = (inteiro % 100);
+            Console.WriteLine("{0} nota(s) de R$ 50.00", auxNotas/50);
+            auxNotas = (auxNotas % 50);
+            Console.WriteLine("{0} nota(s) de R$ 20.00", auxNotas/20);
+            auxNotas = (auxNotas % 20);
+            Console.WriteLine("{0} nota(s) de R$ 10.00", auxNotas/10);
+            auxNotas = (auxNotas % 10);
+            Console.WriteLine("{0} nota(s) de R$ 5.00", auxNotas/5);
+            auxNotas = (auxNotas % 5);
+            Console.WriteLine("{0} nota(s) de R$ 2.00", auxNotas/2);
+            auxNotas = (auxNotas % 2);
 
-                        break;
-
-                    case "2": //Exibe a lista de alunos
-                        foreach (var item in alunos)
-                        {
-                            if (!string.IsNullOrEmpty(item.Nome))
-                            {
-                                Console.WriteLine($"Aluno: {item.Nome} - Nota: {item.Nota}");
-                            }
-                        }
-                        break;
-
-                    case "3": //Calcula e exibe a média geral
-                        decimal notaTotal = 0;
-                        var numeroDeAlunos = 0;
-
-                        for (int i = 0; i < alunos.Length; i++)
-                        {
-                            if (!string.IsNullOrEmpty(alunos[i].Nome))
-                            {
-                                notaTotal = notaTotal + alunos[i].Nota;
-                                numeroDeAlunos++;
-                            }
-                        }
-
-                        var mediaGeral = notaTotal / numeroDeAlunos;
-                        Conceito conceitoGeral;
-                        
-                        if (mediaGeral<2)
-                        {
-                            conceitoGeral = Conceito.E;
-                        }
-                        else if(mediaGeral<4)
-                        {
-                            conceitoGeral = Conceito.D;
-                        }
-                        else if(mediaGeral<6)
-                        {
-                            conceitoGeral = Conceito.C;
-                        }
-                        else if(mediaGeral<8)
-                        {
-                            conceitoGeral = Conceito.B;
-                        }
-                        else
-                        {
-                            conceitoGeral = Conceito.A;
-                        }
-
-                        Console.WriteLine($"Média: {mediaGeral} - Conceito: {conceitoGeral}");
-
-                        break;
-
-                    default:
-                        throw new ArgumentOutOfRangeException();    
-                }
-
-                opcaoUsuario = ObterOpcaoUsuario();
-            }
-        }
-
-        private static string ObterOpcaoUsuario()
-        {
-            Console.WriteLine("\nInforme a opção desejada:");
-            Console.WriteLine("1 - Inserir novo aluno");
-            Console.WriteLine("2 - Listar alunos");
-            Console.WriteLine("3 - Calcular média geral");
-            Console.WriteLine("X - Sair\n");
-
-            string opcaoUsuarioFunc = Console.ReadLine();
-            Console.Write("\n");
-            return opcaoUsuarioFunc;
+            Console.WriteLine("MOEDAS:");
+            Console.WriteLine("{0} moeda(s) de R$ 1.00", auxNotas/1);
+            auxMoedas %= 100;
+            Console.WriteLine("{0} moeda(s) de R$ 0.50", auxMoedas/50);
+            auxMoedas %= 50;
+            Console.WriteLine("{0} moeda(s) de R$ 0.25", auxMoedas/25);
+            auxMoedas %= 25;
+            Console.WriteLine("{0} moeda(s) de R$ 0.10", auxMoedas/10);
+            auxMoedas %= 10;
+            Console.WriteLine("{0} moeda(s) de R$ 0.05", auxMoedas/5);
+            auxMoedas %= 5;
+            Console.WriteLine("{0} moeda(s) de R$ 0.01", auxMoedas/1);
         }
     }
 }
