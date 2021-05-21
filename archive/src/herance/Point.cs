@@ -11,6 +11,7 @@ namespace Classes.Herança
         public Ponto(int x, int y){
             this.x = x;
             this.y = y;
+            distancia ++;
         }
 
         protected void CalcularDistancia(){
